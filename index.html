@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <header>
+    <nav class="header__nav">
+        <h2 class="test">Ecommerce</h2>
+        <ul class="header__nav__ul">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#OurProduct">About us</a></li>
+            <li><a href="#contact">Contact us</a></li>
+
+        </ul>
+    </nav>
+   </header> 
+   <main>
+    <section class="productSection"> 
+ <form class="productSection__form">
+    <div class="productSection__form__inputs">
+        <input class="productSection__form__inputs__input " id="productName" type="text" placeholder="Product Name">
+        <input class="contactSection__form__inputs__input " id="productPrice"  type="text" placeholder="Product price">
+        <select class="productSection__form__inputs__dropdown" id="productCategory">
+            <option value="electronics">Electronics</option>
+            <option value="clothing">Clothing</option>
+            <option value="furniture">furniture</option>
+        </select>
+        <button class="contactSection__form__button" id="submit" >Add product</button>
+      
+
+    </div> </form>
+    <div >
+        <h2>My Products</h2>
+        <ul id="productList">
+
+        </ul>
+    </div>
+    <div>
+        <input type="text" id="searchInput" placeholder="Search for a product">
+        <button id="searchButton">Search</button>
+        <div >
+            <h2>My Products</h2>
+            <ul id="productSearchList">
+    
+            </ul>
+        </div>
+    </div>
+</section>
+   </main>
+   <script src="javascript.js"></script>
+</body>
+</html>
