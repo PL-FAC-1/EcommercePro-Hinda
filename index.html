@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
    <header>
@@ -18,20 +19,35 @@
     </nav>
    </header> 
    <main>
+   
+
+    <div class="startPage">
+        <h1>مرحبًا بك في الصفحة البداية</h1>
+        <button id="sellerButton">Seller</button>
+        <button id="buyerButton">Byuer</button>
+    </div>
+
+
+
+    <div class="sellerContent" style="display: none;">
+
     <section class="productSection"> 
+      
  <form class="productSection__form">
     <div class="productSection__form__inputs">
         <input class="productSection__form__inputs__input " id="productName" type="text" placeholder="Product Name">
         <input class="contactSection__form__inputs__input " id="productPrice"  type="text" placeholder="Product price">
         <select class="productSection__form__inputs__dropdown" id="productCategory">
+       
             <option value="electronics">Electronics</option>
             <option value="clothing">Clothing</option>
             <option value="furniture">furniture</option>
         </select>
+   
         <button class="contactSection__form__button" id="submit" >Add product</button>
       
-
-    </div> </form>
+    </div> 
+   </form> 
     <div >
         <h2>My Products</h2>
         <ul id="productList">
@@ -49,6 +65,12 @@
         </div>
     </div>
 </section>
+    </div>
+    <div class="buyerContent" style="display: none;">
+        <!-- محتوى صفحة المشتري -->
+        <h1>مرحبًا بك في صفحة المشتري</h1>
+    </div>
+
    </main>
    <script src="javascript.js"></script>
 </body>
