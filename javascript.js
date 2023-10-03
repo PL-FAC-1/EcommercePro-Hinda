@@ -131,14 +131,38 @@ const sellerButton = document.getElementById('sellerButton');
 const buyerButton = document.getElementById('buyerButton');
 const sellerContent = document.querySelector('.sellerContent');
 const buyerContent = document.querySelector('.buyerContent');
+const StartPageContent = document.querySelector('.StartSection');
 
 sellerButton.addEventListener('click', () => {
     sellerContent.style.display = 'block';
     buyerContent.style.display = 'none';
+    StartPageContent.style.display = 'none';
 });
 
 buyerButton.addEventListener('click', () => {
     sellerContent.style.display = 'none';
     buyerContent.style.display = 'block';
+    StartPageContent.style.display = 'none';
+
 
 });
+
+
+
+
+const viewProductsButton = document.getElementById("viewProductsButton");
+const sellerProductsList = document.getElementById("sellerProductsList");
+
+viewProductsButton.addEventListener("click", function() {
+    const productsInStorage = JSON.parse(localStorage.getItem("products")) || [];
+    
+    sellerProductsList.innerHTML = "";
+
+    productsInStorage.forEach(product => {
+            const productItem = document.createElement("li");
+            productItem.textContent = `Product Name: ${product.name} - Price: $${product.price} - Category: ${product.category}`;
+            sellerProductsList.appendChild(productItem);
+        
+    });
+});
+

@@ -1,77 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-   <header>
-    <nav class="header__nav">
-        <h2 class="test">Ecommerce</h2>
-        <ul class="header__nav__ul">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#OurProduct">About us</a></li>
-            <li><a href="#contact">Contact us</a></li>
+    <header class="header">
+        <h1 class="header__text">Welcome To you</h1>
+    </header>
+    <main>
 
-        </ul>
-    </nav>
-   </header> 
-   <main>
-   
-
-    <div class="startPage">
-        <h1>مرحبًا بك في الصفحة البداية</h1>
-        <button id="sellerButton">Seller</button>
-        <button id="buyerButton">Byuer</button>
-    </div>
+        <section class="StartSection flex">
+            <p class="StartSection__text">Are You Seller ot Buyer? </p>
+            <button class="StartSection__btn" id="sellerButton">Seller</button>
+            <button class="StartSection__btn" id="buyerButton">Byuer</button>
+        </section>
 
 
+        <section class="sellerContent flex" style="display: none;">
 
-    <div class="sellerContent" style="display: none;">
+            <div class="productSection">
 
-    <section class="productSection"> 
-      
- <form class="productSection__form">
-    <div class="productSection__form__inputs">
-        <input class="productSection__form__inputs__input " id="productName" type="text" placeholder="Product Name">
-        <input class="contactSection__form__inputs__input " id="productPrice"  type="text" placeholder="Product price">
-        <select class="productSection__form__inputs__dropdown" id="productCategory">
-       
-            <option value="electronics">Electronics</option>
-            <option value="clothing">Clothing</option>
-            <option value="furniture">furniture</option>
-        </select>
-   
-        <button class="contactSection__form__button" id="submit" >Add product</button>
-      
-    </div> 
-   </form> 
-    <div >
-        <h2>My Products</h2>
-        <ul id="productList">
+                <form class="productSection__form flex">
+                    <div class="productSection__form__inputs">
+                        <input class="productSection__form__inputs__input " id="productName" type="text"
+                            placeholder="Product Name">
+                        <input class="contactSection__form__inputs__input " id="productPrice" type="text"
+                            placeholder="Product price">
+                        <select class="productSection__form__inputs__dropdown" id="productCategory">
 
-        </ul>
-    </div>
-    <div>
-        <input type="text" id="searchInput" placeholder="Search for a product">
-        <button id="searchButton">Search</button>
-        <div >
-            <h2>My Products</h2>
-            <ul id="productSearchList">
-    
+                            <option value="electronics">Electronics</option>
+                            <option value="clothing">Clothing</option>
+                            <option value="furniture">furniture</option>
+                        </select>
+
+                        <button class="contactSection__form__button" id="submit">Add product</button>
+
+                    </div>
+                </form>
+                <div class="productSection__List">
+                    <h2>My Products</h2>
+                    <ul id="productList">
+
+                    </ul>
+                </div>
+                <div class="productSection__search">
+                    <input type="text" id="searchInput" placeholder="Search for a product">
+                    <button id="searchButton">Search</button>
+                    <div>
+                        <h2>My Products</h2>
+                        <ul id="productSearchList">
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="buyerContent" style="display: none;">
+            <!-- محتوى صفحة المشتري -->
+            <h1>Welcome to Buyer Page</h1>
+            <button id="viewProductsButton">show Products </button>
+            <ul id="sellerProductsList">
+
+
+
             </ul>
-        </div>
-    </div>
-</section>
-    </div>
-    <div class="buyerContent" style="display: none;">
-        <!-- محتوى صفحة المشتري -->
-        <h1>مرحبًا بك في صفحة المشتري</h1>
-    </div>
 
-   </main>
-   <script src="javascript.js"></script>
+
+        </div>
+
+    </main>
+    <script src="javascript.js"></script>
 </body>
+
 </html>
