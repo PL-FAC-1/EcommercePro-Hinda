@@ -4,29 +4,29 @@ const productCategorySelect = document.getElementById("productCategory");
 
 const submitButton = document.getElementById("submit");
 
-submitButton.addEventListener("click", function() {
+submitButton.addEventListener("click", function () {
     const productName = productNameInput.value;
     const productPrice = productPriceInput.value;
     const selectedCategory = productCategorySelect.value;
 
-    if (productName && productPrice&&selectedCategory) {
+    if (productName && productPrice && selectedCategory) {
         const product = {
             name: productName,
             price: productPrice,
-            category: selectedCategory 
+            category: selectedCategory
 
-            
+
         };
 
 
-        
+
         const productsInStorage = JSON.parse(localStorage.getItem("products")) || [];
         productsInStorage.push(product);
         localStorage.setItem("products", JSON.stringify(productsInStorage));
 
         productNameInput.value = "";
         productPriceInput.value = "";
-        productCategorySelect.value = ""; 
+        productCategorySelect.value = "";
 
 
         alert("The product added successfully");
@@ -47,8 +47,8 @@ productsInStorage.forEach(product => {
     product.id = currentProductId;
     productItem.setAttribute("data-product-id", product.id);
 
-  
-    
+
+
     currentProductId++;
 
 
@@ -56,26 +56,26 @@ productsInStorage.forEach(product => {
     const deleteButton = document.createElement("button");
     deleteButton.setAttribute("button-product-id", product.id);
 
-deleteButton.className = "delete-button";
-deleteButton.textContent = "Delete";
-const editButton = document.createElement("button");
-editButton.className = "edit-button";
-editButton.textContent = "Edit";
+    deleteButton.className = "delete-button";
+    deleteButton.textContent = "Delete";
+    const editButton = document.createElement("button");
+    editButton.className = "edit-button";
+    editButton.textContent = "Edit";
     productList.appendChild(productItem);
     productList.appendChild(deleteButton);
     productList.appendChild(editButton);
 });
 
 /////////////////////Search 
-// العناصر HTML
+
 const searchInput = document.getElementById("searchInput");
 const searchButton = document.getElementById("searchButton");
 const productSearchList = document.getElementById("productSearchList");
 
 
-searchButton.addEventListener("click", function() {
+searchButton.addEventListener("click", function () {
     const searchTerm = searchInput.value.toLowerCase();
-    
+
     const proSreachStorege = JSON.parse(localStorage.getItem("products")) || [];
 
     productSearchList.innerHTML = "";
@@ -103,7 +103,7 @@ searchButton.addEventListener("click", function() {
 
 // function deleteProduct(productId) {
 //     const index = productsInStorage.findIndex(product => product.id === productId);
-    
+
 //     if (index !== -1) {
 //         productsInStorage.splice(index, 1);
 //     }
@@ -114,7 +114,7 @@ searchButton.addEventListener("click", function() {
 
 //     // قم بتنفيذ العملية لحذف المنتج الذي يتوافق مع معرف المنتج
 //     deleteProduct(productId);
-    
+
 //     // إعادة تحميل أو تحديث قائمة المنتجات بعد الحذف
 //     // يمكنك استخدام دالة لإعادة رسم قائمة المنتجات
 // });
@@ -153,16 +153,52 @@ buyerButton.addEventListener('click', () => {
 const viewProductsButton = document.getElementById("viewProductsButton");
 const sellerProductsList = document.getElementById("sellerProductsList");
 
-viewProductsButton.addEventListener("click", function() {
+viewProductsButton.addEventListener("click", function () {
     const productsInStorage = JSON.parse(localStorage.getItem("products")) || [];
-    
+
     sellerProductsList.innerHTML = "";
 
     productsInStorage.forEach(product => {
-            const productItem = document.createElement("li");
-            productItem.textContent = `Product Name: ${product.name} - Price: $${product.price} - Category: ${product.category}`;
-            sellerProductsList.appendChild(productItem);
-        
+        const productItem = document.createElement("li");
+        productItem.textContent = `Product Name: ${product.name} - Price: $${product.price} `;
+        sellerProductsList.appendChild(productItem);
+
     });
 });
+ //search  for product by name 
+const buyersearchInput = document.getElementById("searchInput");
+const buyersearchButton = document.getElementById("buyersearchButton");
+const searchResultsList = document.getElementById("searchResultsList");
+
+buyersearchButton.addEventListener("click", () => {
+console.log(productsInStorage)
+  const buyersearchTerm = buyersearchInput.value.toLowerCase();
+    const matchingProducts = productsInStorage.filter(product => product.name.toLowerCase().includes(buyersearchTerm));
+  
+    displaySearchResults(matchingProducts);
+});
+
+function displaySearchResults(results) {
+    searchResultsList.innerHTML = "";
+  
+
+    if (results.length === 0) {
+      searchResultsList.innerHTML = "<li>No matching products found</li>";
+    } else {
+      results.forEach(product => {
+        const listItem = document.createElement("li");
+        listItem.textContent = `Product Name: ${product.name}, Price: $${product.price}, Category: ${product.category}`;
+        searchResultsList.appendChild(listItem);
+      });
+    }
+  }
+  
+
+
+
+
+
 /////////////////////
+// module.exports = {
+//     addProduct
+// };

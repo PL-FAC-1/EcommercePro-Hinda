@@ -1,51 +1,60 @@
-body{
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    
+
 }
-*{
+
+* {
     box-sizing: border-box;
 }
-.flex{
+
+.flex {
     display: flex;
-    
+
 }
+
 .StartSection {
     flex-direction: column;
-justify-content: center;
-align-items: center;
+    justify-content: center;
+    align-items: center;
 
 }
-.header{
-text-align: center;
+
+.header {
+    text-align: center;
 }
-.StartSection__btn{
-width: 10rem;
-height: 4rem;
-font-size: 2rem;
-border-radius: 10px;
-background-color: #5c7d9f;
-margin: 1.5rem;
+
+.StartSection__btn {
+    width: 10rem;
+    height: 4rem;
+    font-size: 2rem;
+    border-radius: 10px;
+    background-color: #5c7d9f;
+    margin: 1.5rem;
 
 
 }
-.header__text{
+
+.header__text {
     font-size: 5rem;
 
 }
-.StartSection__text{
+
+.StartSection__text {
     font-size: 3rem;
-color: red;
-background-color: #c5c6c8;
-border-radius: 10px;
+    color: red;
+    background-color: #c5c6c8;
+    border-radius: 10px;
 
 }
-.sellerContent{
+
+.sellerContent {
     padding-bottom: 20%;
 }
+
 .productSection__form {
     width: 20rem;
     margin: 0 auto;
@@ -54,18 +63,21 @@ border-radius: 10px;
     background-color: #f9f9f9;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.productSection__List{
+
+.productSection__List ,#sellerProductsList{
     width: 80vw;
     padding: 1.2rem;
     border: 1px solid #ccc;
     border-radius: 8px;
     background-color: #f9f9f9;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 2rem  auto;
+    margin: 2rem auto;
 
-   
+
 }
-#productList ,#productSearchList{
+
+#productList,
+#productSearchList {
     font-size: 1.5rem;
 }
 
@@ -99,25 +111,25 @@ border-radius: 10px;
     background-color: #0056b3;
 }
 
-#searchInput {
+#searchInput{
     width: 40vw;
     padding: 10px;
-    margin-top: 1.2rem; 
-    border: 1px solid #000000; 
-    border-radius: 5px; 
+    margin-top: 1.2rem;
+    border: 1px solid #000000;
+    border-radius: 5px;
     font-size: 1rem;
 }
 
-#searchButton {
-    padding: 10px 20px; 
-    background-color: #007bff; 
-    color: #fff; 
-    border: none; 
-    border-radius: 5px; 
-    cursor: pointer; 
+#searchButton ,#buyersearchButton{
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.productSection__search{
+.productSection__search {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -129,8 +141,7 @@ border-radius: 10px;
 
 
 
-input[type="text"]
- {
+input[type="text"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;

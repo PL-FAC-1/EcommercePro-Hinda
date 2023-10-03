@@ -60,18 +60,24 @@
                 </div>
             </div>
         </section>
-        <div class="buyerContent" style="display: none;">
+        <section class="buyerContent" style="display: none;">
             <!-- محتوى صفحة المشتري -->
             <h1>Welcome to Buyer Page</h1>
-            <button id="viewProductsButton">show Products </button>
-            <ul id="sellerProductsList">
+            <div>
+                <button id="viewProductsButton">show Products </button>
+                <ul id="sellerProductsList"></ul>
+                </ul>
+            </div>
 
+            <div class="buyerContent__search">
+                <input type="text" id="searchInput" placeholder="Search for a product by name">
+                <button id="buyersearchButton">Search</button>
+            </div>
+            <div class="buyerContent__search--results">
+                <ul id="searchResultsList"></ul>
+            </div>
 
-
-            </ul>
-
-
-        </div>
+        </section>
 
     </main>
     <script src="javascript.js"></script>
